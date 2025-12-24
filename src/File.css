@@ -1,0 +1,68 @@
+/* Root container */
+.layout-row {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Main tree UL */
+ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* Each LI element */
+li {
+  margin: 4px 0;
+  cursor: default;
+}
+
+/* Name + folder icons */
+li > div > button {
+  background: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+li > div > button:hover {
+  background: #e9e9e9;
+}
+
+/* + button for adding files */
+li button[aria-label^="add-to"] {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+li button[aria-label^="add-to"]:hover {
+  background: #218838;
+}
+
+/* Input box styling */
+input[data-testid="input-box"] {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 2px solid #333;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[data-testid="input-box"]:focus {
+  border-color: #007bff;
+}
+
+/* Indentation for nested level */
+li ul {
+  margin-left: 20px;
+  border-left: 1px dashed #ccc;
+  padding-left: 10px;
+}
